@@ -124,7 +124,7 @@ jobs:
 
       - name: Upload coverage
         if: matrix.python == '3.12'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: coverage
           path: coverage.xml
@@ -164,7 +164,7 @@ jobs:
           python tasks.py backup
           python tasks.py restore-verify
       - name: Upload benchmark artefacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: benchmark-${{ github.sha }}
           path: |
